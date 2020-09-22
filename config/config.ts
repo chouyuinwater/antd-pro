@@ -2,9 +2,7 @@
 import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import proxy from './proxy';
-
 const { REACT_APP_ENV } = process.env;
-
 export default defineConfig({
   hash: true,
   antd: {},
@@ -72,6 +70,18 @@ export default defineConfig({
     {
       path: '/',
       redirect: '/welcome',
+    },
+    {
+      name: 'dashboard.workplace',
+      icon: 'smile',
+      path: '/dashboardworkplace',
+      component: './DashboardWorkplace',
+    },
+    {
+      name: 'profile.advanced',
+      icon: 'smile',
+      path: '/profileadvanced',
+      component: './ProfileAdvanced',
     },
     {
       component: './404',
